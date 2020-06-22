@@ -1,7 +1,7 @@
 (*
     File:        KennedyProblem2.thy
-    Version:     0.0.1
-    Time-stamp:  <2020-06-21T21:46:16Z>
+    Version:     0.0.2
+    Time-stamp:  <2020-06-22T11:04:37Z>
     Author:      JRF
     Logic Image: HOL (of Isabelle2020)
 
@@ -56,8 +56,8 @@ ALL a::angel. ALL b::angel. ALL c::angel.
 lemma kennedy_answer:
   shows "kennedy_problem (%f a b c. f (b = Stalin))
            (%p. if p then 2 else 1) (% f a b c. f Paradise)"
-  apply (simp add: kennedy_problem_def)
-  apply (rule allI)+
+  apply (unfold kennedy_problem_def)
+  apply (intro allI)
   apply (case_tac [!] a)
   apply (case_tac [!] b)
   apply (case_tac [!] c)

@@ -1,7 +1,7 @@
 (*
     File:        KennedyProblem1.thy
-    Version:     0.0.1
-    Time-stamp:  <2020-06-21T21:46:22Z>
+    Version:     0.0.2
+    Time-stamp:  <2020-06-22T11:04:41Z>
     Author:      JRF
     Logic Image: HOL (of Isabelle2020)
 
@@ -39,8 +39,8 @@ ALL x::angel. apply_angel x (Q (apply_angel x)) = Paradise"
 
 lemma kennedy_answer:
   shows "kennedy_problem (% f. f Paradise)"
-  apply (simp add: kennedy_problem_def)
-  apply (rule allI)
+  apply (unfold kennedy_problem_def)
+  apply (intro allI)
   apply (case_tac x)
   apply (simp_all add: churchill_def hitler_def)
   done

@@ -1,7 +1,7 @@
 
 
     ケネディと天使の問題を Isabelle で証明 その１ うそつき天使問題
-    (Created: 2020-06-22, Time-stamp: <2020-06-21T23:00:28Z>)
+    (Created: 2020-06-22, Time-stamp: <2020-06-22T15:05:13Z>)
 
 
 ** 概要
@@ -167,8 +167,8 @@ ALL x::angel. apply_angel x (Q (apply_angel x)) = Paradise"
 
 lemma kennedy_answer:
   shows "kennedy_problem (% f. f Paradise)"
-  apply (simp add: kennedy_problem_def)
-  apply (rule allI)
+  apply (unfold kennedy_problem_def)
+  apply (intro allI)
   apply (case_tac x)
   apply (simp_all add: churchill_def hitler_def)
   done
@@ -363,8 +363,8 @@ ALL a::angel. ALL b::angel. ALL c::angel.
 lemma kennedy_answer:
   shows "kennedy_problem (%f a b c. f (b = Stalin))
            (%p. if p then 2 else 1) (% f a b c. f Paradise)"
-  apply (simp add: kennedy_problem_def)
-  apply (rule allI)+
+  apply (unfold kennedy_problem_def)
+  apply (intro allI)
   apply (case_tac [!] a)
   apply (case_tac [!] b)
   apply (case_tac [!] c)
