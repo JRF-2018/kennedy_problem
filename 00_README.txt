@@ -1,7 +1,7 @@
 
 
     ケネディと天使の問題を Isabelle で証明 その１ うそつき天使問題
-    (Created: 2020-06-22, Time-stamp: <2020-08-14T10:13:27Z>)
+    (Created: 2020-06-22, Time-stamp: <2020-09-03T05:52:13Z>)
 
 
 ** 概要
@@ -226,6 +226,12 @@ Isabelle にはソルバーのようなものも付いてる。EX Q. kennedy_pro
     てはさらにググる必要があるようだ。
 
     https://www.osaka-kyoiku.ac.jp/~hiraki/etc/quiz.htm
+
+  * 《Wand's Box - 2値論理方程式で天使と悪魔問題を解く》。XOR を使った
+    論理方程式で「うそつき天使」問題(天使と悪魔問題)を解いている。ただ、
+    『詭弁論理学』の論理方程式とは別物のようである。(2020年9月3日 追記。)
+
+    https://scrapbox.io/wandsbox/2%E5%80%A4%E8%AB%96%E7%90%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A7%E5%A4%A9%E4%BD%BF%E3%81%A8%E6%82%AA%E9%AD%94%E5%95%8F%E9%A1%8C%E3%82%92%E8%A7%A3%E3%81%8F
 
   * 定理証明システム《Isabelle》。今回使ったのは Isabelle2020 の HOL。
     定理証明システムはいろいろあるが、私は昔取った杵柄で、Isabelle を
